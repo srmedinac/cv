@@ -24,7 +24,7 @@ Complete la tabla:
 
 | Ilusión | Categoria | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |---------|-----------|------------|------------------------------------|-----------------------------|
-|    Herring Illusion     |   Geometric        |     https://www.openprocessing.org/sketch/168636      |  None                                  |              https://www.openprocessing.org/sketch/168636               |
+|    Herring Illusion     |   Geometric        |    openprocessing     |  None                                  |              https://www.openprocessing.org/sketch/168636               |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
