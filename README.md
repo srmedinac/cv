@@ -1,4 +1,4 @@
-# visualcomputing
+# Visual Computing
 
 ## Workshops repo for the visual computing class at the National Univeristy of Colombia
 
