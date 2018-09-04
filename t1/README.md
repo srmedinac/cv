@@ -15,7 +15,7 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+|    Sebastian Medina        |     srmedinac        |
 
 ## Discusión
 
