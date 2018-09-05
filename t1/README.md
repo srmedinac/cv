@@ -26,7 +26,7 @@ Complete la tabla:
 |---------|-----------|------------|------------------------------------|-----------------------------|
 |    Herring Illusion     |   Geometric        |    openprocessing     |  None                                  |              https://www.openprocessing.org/sketch/168636               |
 |   Gradient Illusion      |           |      openprocessing      |            Movement                        |   https://www.openprocessing.org/sketch/168577                          |
-|         |           |            |                                    |                             |
+|   Stepping Feet      |           |    openprocessing        |      clickable                              |     https://www.openprocessing.org/sketch/168574                        |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
 |         |           |            |                                    |                             |
