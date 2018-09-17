@@ -25,8 +25,8 @@ Complete la tabla:
 | Ilusión | Categoria | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |---------|-----------|------------|------------------------------------|-----------------------------|
 |    Herring Illusion     |   Geometric        |    openprocessing     |  None                                  |              https://www.openprocessing.org/sketch/168636               |
-|   Gradient Illusion      |           |      openprocessing      |            Movement                        |   https://www.openprocessing.org/sketch/168577                          |
-|   Stepping Feet      |           |    openprocessing        |      clickable                              |     https://www.openprocessing.org/sketch/168574                        |
+|   Gradient Illusion      |    Physiological       |      openprocessing      |            Movement                        |   https://www.openprocessing.org/sketch/168577                          |
+|   Stepping Feet      |    Physiological       |    openprocessing        |      clickable                              |     https://www.openprocessing.org/sketch/168574                        |
 |    Circle Illusion     |  Physiological         |    Physiological Illusions         |    Movement && clickable                       |                             |
 |    moving squares   |     Distorting illusions      |      openprocessing      |    Movement                                |       https://www.openprocessing.org/sketch/546302                      |
 |    Penrose_Triangle_Ilussion |      Paradox illusions     |     openprocessing       |                               |    https://www.openprocessing.org/sketch/375565                         |
