@@ -25,17 +25,19 @@ Complete la tabla:
 | Ilusión | Categoria | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |---------|-----------|------------|------------------------------------|-----------------------------|
 |    Herring Illusion     |   Geometric        |    openprocessing     |  None                                  |              https://www.openprocessing.org/sketch/168636               |
-|   Gradient Illusion      |           |      openprocessing      |            Movement                        |   https://www.openprocessing.org/sketch/168577                          |
-|   Stepping Feet      |           |    openprocessing        |      clickable                              |     https://www.openprocessing.org/sketch/168574                        |
+|   Gradient Illusion      |    Physiological       |      openprocessing      |            Movement                        |   https://www.openprocessing.org/sketch/168577                          |
+|   Stepping Feet      |    Physiological       |    openprocessing        |      clickable                              |     https://www.openprocessing.org/sketch/168574                        |
 |    Circle Illusion     |  Physiological         |    Physiological Illusions         |    Movement && clickable                       |                             |
 |    moving squares   |     Distorting illusions      |      openprocessing      |    Movement                                |       https://www.openprocessing.org/sketch/546302                      |
-|    Penrose_Triangle_Ilussion |      Paradox illusions     |     openprocessing       |                               |    https://www.openprocessing.org/sketch/375565                         |
+|    Penrose_Triangle_Ilussion |      Paradox illusions     |     openprocessing       |              None                 |    https://www.openprocessing.org/sketch/375565                         |
 
 2. Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
 
+Se estudiaron diferentes referencias y códigos ejemplo en openprocessing.com, se observa que se pueden implementar varios efectos visuales de manera sencilla mediante la utilización de Processing. Nos gustaría profundizar en efectos tipo Moiré, los cuales son fantásticos
+Physiological Illusions were quite interesting since they deceive the visual perception of the user, besides to realize it is necessary to make use of mathematical knowledge especially of geometry. It could be an interesting subject of investigation.
 ## Entrega
 
-Physiological Illusions were quite interesting since they deceive the visual perception of the user, besides to realize it is necessary to make use of mathematical knowledge especially of geometry. It could be an interesting subject of investigation.
+
 
 * Modo de entrega: clonar este repo y subirlo a `https://github.com/username/cv/t1`.
 * Plazo: 16/9/18 a las 24h.
