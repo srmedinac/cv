@@ -36,7 +36,7 @@ Complete la tabla:
 
 ## Discusión
 
-Describa los resultados obtenidos. En el caso de anti-aliasing describir las técnicas exploradas, citando las referencias.
+Se pudo obtener un programa que recibe un triangulo vectorial y retorna un triangulo rasterizado .Tambien se logro por medio de coordenadas baricentricas ,darle un color sombreado a cada punto del triangulo .Con la ayuda de la funcion EdgeFunction se logro tambien realizar el shading y finalmente el antialiasing.Nos fue de gran ayuda el articulo [Rasterization: a Practical Implementation](https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/rasterization-stage) ya que nos explico de manera sencilla y practica lo que es rasterizacion de triangulos y coordenadas baricentricas.
 
 ## Entrega
 
