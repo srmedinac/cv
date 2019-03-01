@@ -40,7 +40,7 @@ import java.util.LinkedHashSet;
 import java.util.concurrent.ThreadLocalRandom;
 Scene scene;
 //flock bounding box
-int initBoidNum = 600;
+int initBoidNum = 700;
 static int flockWidth = 1280;
 static int flockHeight = 720;
 static int flockDepth = 600;
