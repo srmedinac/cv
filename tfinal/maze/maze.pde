@@ -251,25 +251,6 @@ void drawWall() {
 }
 
 /**
- * Draws tree in current case.
- */
-void drawTree() {
-  drawGround();
-  
-  final Ellipsoid tree = new Ellipsoid(this, 20, 30);
-  tree.setTexture(TREE_TEXTURE);
-  tree.drawMode(Shape3D.TEXTURE);
-  tree.setRadius(CASE_SIZE / 2);
-
-  pushMatrix();
-  translate(CASE_SIZE / 2, -CASE_SIZE / 2, CASE_SIZE / 2);
-  tree.draw();
-  popMatrix();
-  
-  noFill();
-}
-
-/**
  * Draws ground in current case.
  */
 void drawGround() {
@@ -283,35 +264,9 @@ void drawGround() {
   noFill();
 }
 
-/**
- * Draws water in current case.
- */
-void drawWater() {
-  beginShape(QUADS);
-  texture(WATER_TEXTURE);
-  vertex(0, 0, 0, 0, 0);
-  vertex(CASE_SIZE, 0, 0, 1, 0);
-  vertex(CASE_SIZE, 0, CASE_SIZE, 1, 1);
-  vertex(0, 0, CASE_SIZE, 0, 1);
-  endShape();
-  noFill();
-}
-
-/**
- * Draws sphere in current case.
- */
-void drawSphere() {
-  pushMatrix();
-  translate(CASE_SIZE / 2, -CASE_SIZE / 2, CASE_SIZE / 2);
-  sphere(CASE_SIZE / 2);
-  popMatrix();
-}
-
 void loop() { 
 } 
- 
- 
- 
+
 void DigMaze(int[] Maze, int x, int y) { 
   int newx; 
   int newy; 
