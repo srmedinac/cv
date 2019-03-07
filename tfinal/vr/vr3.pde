@@ -53,16 +53,26 @@ void calculate() {
 }
 
 public void draw() {
-  background(0);
+  background(51,168,255);
   translate(width/2, height/2);
   lights();
   //directionalLight(200, 200, 200, 0, +1, -1);
-  
+
+  drawAim();
   translate(tx, ty, tz);
   shape(cubes);
 
   eye();  
   //shape(frame);
+}
+void drawAim(){
+  eye();
+  stroke(88,255,51);
+  strokeWeight(50);
+  point(0,0,100);
+}
+void drawGrid(){
+  
 }
 
 void prepare(PShape sh, float s) {
