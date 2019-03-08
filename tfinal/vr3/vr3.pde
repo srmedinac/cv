@@ -17,7 +17,7 @@ public void setup() {
   
   frame = loadShape("dodecahedron.obj");  
   prepare(frame, 500);
-  grid = createShape();
+ /* grid = createShape();
   grid.beginShape(LINES);
   grid.stroke(66, 206, 244);
   for (int x = -10000; x < +10000; x += 250) {
@@ -28,10 +28,10 @@ public void setup() {
     grid.vertex(+10000, +1000, z);
     grid.vertex(-10000, +1000, z);      
   }  
-  grid.endShape();
+  grid.endShape();*/
   cubes = createShape(GROUP);
   float v = 5 * width;
-  for (int i = 0; i < 50; i++) {
+  for (int i = 0; i < 100; i++) {
     float x = random(-v, +v);
     float y = random(-v, +v);
     float z = random(-v, +v);
