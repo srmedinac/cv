@@ -4,9 +4,9 @@ import damkjer.ocd.*;
 
 
 
-int W = 14; // Maze Width 
-int H = 15; // Maze Height 
-int S = 22;  // Block size 
+int W = 15; // Maze Width 
+int H = 14; // Maze Height 
+int S = 102;  // Block size 
 int g_intDepth; 
 
 int intIndex, x, y; 
@@ -26,6 +26,7 @@ final float CAMERA_Y = -5;   // camera permanent attitude
 int[] Maze  = new int[W*H]; 
 PShape cubes;
 PShape grid;
+PShape flag;
 PMatrix3D eyeMat = new PMatrix3D();
 float tx, tz;
 float step = 30;
@@ -52,8 +53,7 @@ public void setup() {
   grid.vertex(+10000,+200,+10000);
   grid.endShape();
   box = createShape();
-  
-  
+ 
   /*Setup of Maze*/
   for (intIndex = 0; intIndex < (W*H)-1; intIndex++) Maze[intIndex] = 0;
   
@@ -72,14 +72,14 @@ public void setup() {
   cubes = createShape(GROUP);
    //TEXTURA GRUPO
   float v = 5 * width;
-  for (int i = 0; i < 600; i++) {
-    float x = random(-v, +v);
-    float z = random(-v, +v);
+  for (int i = 0; i < 1; i++) {
+    float x = 0;
+    float z = 0;
     float s = 300;
     float y = +200 - s/2;
     PShape sh = createShape(BOX, s);
     //sh.setTexture(WALL_TEXTURE); *********************textura******************
-    sh.setFill(color(#69fffc));
+    sh.setFill(color(255,0,0));
     //sh.drawMode(S3D.TEXTURE);
    
     sh.translate(x, y, z);
@@ -106,17 +106,18 @@ public void draw() {
   pointLight(50, 50, 200, 0, 1000, 0);
   ambientLight(200, 200, 255, 0, +1, -1);
   translate(tx, 0, tz);
-  image(GROUND_TEXTURE,0,+200,10000,1);
+  //image(GROUND_TEXTURE,0,+200,10000,1);
   shape(grid);
-  //shape(cubes);
-  drawMaze();
+  shape(cubes);
+  
+//drawMaze();
   
   
 }
 
 
 void drawMaze(){
-  translate(width / 2, height / 2, 0);
+  translate(width / 2, 0 , height / 2);
  
   /* Draw map */
   for (int row = 0; row < 14; row++) {
