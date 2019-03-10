@@ -3,8 +3,8 @@ import damkjer.ocd.*;
 import shapes3d.*;
 
 
-int W = 14; // Maze Width 
-int H = 15; // Maze Height 
+int W = 650; // Maze Width 
+int H = 14; // Maze Height 
 int S = 22;  // Block size 
 int g_intDepth; 
 
@@ -21,9 +21,9 @@ PImage WALL_TEXTURE;
 PImage GROUND_TEXTURE;
 
 final float CASE_SIZE = 10;  // size of one case
-final float CAMERA_Y = -5;   // camera permanent attitude
+//final float CAMERA_Y = -5;   // camera permanent attitude
 
-
+ 
 
 // TODO: remove it later
 float ldX, ldY, ldZ = 0;
@@ -31,16 +31,17 @@ float ldX, ldY, ldZ = 0;
 
 
 int[] Maze  = new int[W*H]; 
-Camera camera;
+//Camera camera;
 //-------------------------
 PShape cubes;
 PShape grid;
 PMatrix3D eyeMat = new PMatrix3D();
 float tx, tz;
-float step = 10;
+float step = 15;
 PVector planeDir = new PVector();
 public void setup() {
   fullScreen(STEREO);
+  
   grid = createShape();
   grid.beginShape(LINES);
   grid.stroke(255);
@@ -53,6 +54,7 @@ public void setup() {
     grid.vertex(-10000, +200, z);
   }
   grid.endShape();
+  
   cubes = createShape(GROUP);
   float v = 5 * width;
   for (int i = 0; i < 100; i++) {
@@ -65,7 +67,7 @@ public void setup() {
     sh.translate(x, y, z);
     cubes.addChild(sh);
   }
-  size(1000, 600, P3D);
+  //size(1000, 600, P3D);
   noStroke();
     
   /*Setup of Maze*/
@@ -77,7 +79,7 @@ public void setup() {
   Maze[1*W+1] = 2; 
   Maze[13*W+13] = 1; 
     /* Setup camera */
-  camera = new Camera(this, 30, CAMERA_Y, 30);
+  //camera = new Camera(this, 30, CAMERA_Y, 30);
    
     /* Load textures */
   WALL_TEXTURE = loadImage("brick-wall-texture.jpg");
@@ -109,7 +111,7 @@ public void draw() {
   ambientLight(200, 200, 200);
   
   /* Pose camera */
-  camera.feed();
+ // camera.feed();
   /*
   System.out.println(map.length);
   System.out.println(map[0].length);
