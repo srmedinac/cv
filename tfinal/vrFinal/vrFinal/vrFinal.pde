@@ -6,7 +6,7 @@ import damkjer.ocd.*;
 
 int W = 15; // Maze Width 
 int H = 14; // Maze Height 
-int S = 102;  // Block size 
+int S = 202;  // Block size 
 int g_intDepth; 
 
 int intIndex, x, y; 
@@ -20,7 +20,7 @@ final color GROUND_COLOR = #89ff93;
 PImage WALL_TEXTURE;
 PImage GROUND_TEXTURE;
 PShape box;
-final float CASE_SIZE = 10;  // size of one case
+final float CASE_SIZE = 100;  // size of one case
 final float CAMERA_Y = -5;   // camera permanent attitude
 
 int[] Maze  = new int[W*H]; 
@@ -109,15 +109,14 @@ public void draw() {
   //image(GROUND_TEXTURE,0,+200,10000,1);
   shape(grid);
   shape(cubes);
-  
-//drawMaze();
+  drawMaze();
   
   
 }
 
 
 void drawMaze(){
-  translate(width / 2, 0 , height / 2);
+  translate(width / 2, +200 - 300/2 , height / 2);
  
   /* Draw map */
   for (int row = 0; row < 14; row++) {
@@ -149,8 +148,8 @@ void drawMaze(){
 
 void drawWall() {
  final Box box = new Box(this, CASE_SIZE);
- box.drawMode(S3D.TEXTURE);
- box.setTexture(WALL_TEXTURE);
+ //box.drawMode(S3D.TEXTURE);
+ //box.setTexture(WALL_TEXTURE);
  
  pushMatrix();
  translate(CASE_SIZE / 2, -CASE_SIZE / 2, CASE_SIZE / 2);
@@ -164,7 +163,7 @@ void drawWall() {
  */
 void drawGround() {
   beginShape(QUADS);
-  texture(GROUND_TEXTURE);
+  //texture(GROUND_TEXTURE);
   vertex(0, 0, 0, 0, 0);
   vertex(CASE_SIZE, 0, 0, 1, 0);
   vertex(CASE_SIZE, 0, CASE_SIZE, 1, 1);
