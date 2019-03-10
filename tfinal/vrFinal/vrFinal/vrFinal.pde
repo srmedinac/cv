@@ -19,7 +19,7 @@ final color GROUND_COLOR = #89ff93;
 /* Textures */
 PImage WALL_TEXTURE;
 PImage GROUND_TEXTURE;
-
+PShape box;
 final float CASE_SIZE = 10;  // size of one case
 final float CAMERA_Y = -5;   // camera permanent attitude
 
@@ -35,8 +35,9 @@ public void setup() {
   fullScreen(STEREO);
   grid = createShape();
   grid.beginShape(LINES);
+  //grid.setTexture(GROUND_TEXTURE);
   grid.stroke(0,255,0);
- // grid.fill(0,255,0);
+  grid.fill(0,255,0);
   for (int x = -10000; x < +10000; x += 500) {
     grid.vertex(x, +200, +10000);
     grid.vertex(x, +200, -10000);
@@ -45,8 +46,13 @@ public void setup() {
   grid.vertex(+10000, +200, z);
   grid.vertex(-10000, +200, z);
   }
+  grid.vertex(-10000, +200,  +10000);
+  grid.vertex(-10000,+200,-10000);
+  grid.vertex(+10000,+200,-10000);
+  grid.vertex(+10000,+200,+10000);
   grid.endShape();
-
+  box = createShape();
+  
   
   /*Setup of Maze*/
   for (intIndex = 0; intIndex < (W*H)-1; intIndex++) Maze[intIndex] = 0;
@@ -61,8 +67,8 @@ public void setup() {
   WALL_TEXTURE = loadImage("brick-wall-texture.jpg");
   GROUND_TEXTURE = loadImage("grass-texture.png");
   textureMode(NORMAL);
-  drawMaze();
-  /*textureMode(NORMAL);
+  
+
   cubes = createShape(GROUP);
    //TEXTURA GRUPO
   float v = 5 * width;
@@ -100,8 +106,11 @@ public void draw() {
   pointLight(50, 50, 200, 0, 1000, 0);
   ambientLight(200, 200, 255, 0, +1, -1);
   translate(tx, 0, tz);
+  image(GROUND_TEXTURE,0,+200,10000,1);
   shape(grid);
-  shape(cubes);
+  //shape(cubes);
+  drawMaze();
+  
   
 }
 
@@ -136,19 +145,19 @@ void drawMaze(){
 /**
  * Draws wall in current case.
  */
+
 void drawWall() {
-  final Box box = new Box(this, CASE_SIZE);
-  box.drawMode(S3D.TEXTURE);
-  box.setTexture(WALL_TEXTURE);
-  
-  pushMatrix();
-  translate(CASE_SIZE / 2, -CASE_SIZE / 2, CASE_SIZE / 2);
-  box.draw();
-  popMatrix();
+ final Box box = new Box(this, CASE_SIZE);
+ box.drawMode(S3D.TEXTURE);
+ box.setTexture(WALL_TEXTURE);
+ 
+ pushMatrix();
+ translate(CASE_SIZE / 2, -CASE_SIZE / 2, CASE_SIZE / 2);
+ box.draw();
+ popMatrix();
 
-  noFill();
+ noFill();
 }
-
 /**
  * Draws ground in current case.
  */
