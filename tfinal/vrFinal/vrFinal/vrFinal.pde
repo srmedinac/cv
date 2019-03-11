@@ -74,7 +74,7 @@ public void setup() {
 
   cubes = createShape(GROUP);
    //TEXTURA GRUPO
-  cubes.setTexture(WALL_TEXTURE);
+  //cubes.setTexture(WALL_TEXTURE);
   float v = 5 * width;
   for (int i = 0; i < 300; i++) {
     float x = random(-v,+v);
@@ -82,11 +82,13 @@ public void setup() {
     float s = 300;
     float y = +200 - s/2;
     PShape sh = createShape(BOX, s);
-    
+    sh.beginShape();
+    sh.texture(WALL_TEXTURE);
     //sh.setFill(color(255,0,0));
     //sh.drawMode(S3D.TEXTURE);
      
     sh.translate(x, y, z);
+    sh.endShape();
     cubes.addChild(sh);
     
     
