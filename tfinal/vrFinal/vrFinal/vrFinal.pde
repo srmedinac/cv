@@ -74,7 +74,7 @@ public void setup() {
 
   cubes = createShape(GROUP);
    //TEXTURA GRUPO
-  
+  cubes.setTexture(WALL_TEXTURE);
   float v = 5 * width;
   for (int i = 0; i < 300; i++) {
     float x = random(-v,+v);
@@ -82,7 +82,7 @@ public void setup() {
     float s = 300;
     float y = +200 - s/2;
     PShape sh = createShape(BOX, s);
-    sh.setTexture(WALL_TEXTURE);
+    
     //sh.setFill(color(255,0,0));
     //sh.drawMode(S3D.TEXTURE);
      
@@ -110,12 +110,15 @@ void calculate() {
 //--------------------------------------------------------------------------------------
 public void draw() {
   background(0);
+  shader(texShader);
   translate(width/2, height/2);
-  pointLight(50, 50, 200, 0, 1000, 0);
-  ambientLight(200, 200, 255, 0, +1, -1);
+  //pointLight(50, 50, 200, 0, 1000, 0);
+  //ambientLight(200, 200, 255, 0, +1, -1);
+  pointLight(255, 255, 255, width/2, height, 200);
+  directionalLight(51, 102, 126, -1, 0, 0);
   translate(tx, 0, tz);
   //image(GROUND_TEXTURE,0,+200,10000,1);
-  shader(texShader);
+  
   shape(grid);
   shape(cubes);
   //drawMaze();
