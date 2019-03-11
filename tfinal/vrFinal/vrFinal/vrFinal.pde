@@ -91,7 +91,7 @@ public void setup() {
     
     
   }
-  texShader = loadShader("texfrag.glsl","texvert.glsl");
+  texShader = loadShader("pixlightxfrag.glsl", "pixlightxvert.glsl");
   //cubes.setTexture(WALL_TEXTURE);*/
 }
 //----------------------------------------------------------------------------
