@@ -20,6 +20,7 @@ final color GROUND_COLOR = #89ff93;
 PImage WALL_TEXTURE;
 PImage GROUND_TEXTURE;
 PShape box;
+PShader texShader;
 final float CASE_SIZE = 100;  // size of one case
 final float CAMERA_Y = -5;   // camera permanent attitude
 
@@ -31,6 +32,8 @@ PMatrix3D eyeMat = new PMatrix3D();
 float tx, tz;
 float step = 30;
 PVector planeDir = new PVector();
+
+//---------------------------------------------------------------------------------------
 public void setup() {
 
   fullScreen(STEREO);
@@ -52,8 +55,8 @@ public void setup() {
   grid.vertex(+10000,+200,-10000);
   grid.vertex(+10000,+200,+10000);
   grid.endShape();
-  box = createShape();
- 
+  //box = createShape();
+  
   /*Setup of Maze*/
   for (intIndex = 0; intIndex < (W*H)-1; intIndex++) Maze[intIndex] = 0;
   
@@ -71,23 +74,27 @@ public void setup() {
 
   cubes = createShape(GROUP);
    //TEXTURA GRUPO
+  
   float v = 5 * width;
-  for (int i = 0; i < 1; i++) {
-    float x = 0;
-    float z = 0;
+  for (int i = 0; i < 300; i++) {
+    float x = random(-v,+v);
+    float z = random(-v,+v);
     float s = 300;
     float y = +200 - s/2;
     PShape sh = createShape(BOX, s);
-    //sh.setTexture(WALL_TEXTURE); *********************textura******************
-    sh.setFill(color(255,0,0));
+    sh.setTexture(WALL_TEXTURE);
+    //sh.setFill(color(255,0,0));
     //sh.drawMode(S3D.TEXTURE);
-   
+     
     sh.translate(x, y, z);
     cubes.addChild(sh);
     
+    
   }
+  texShader = loadShader("texfrag.glsl","texvert.glsl");
   //cubes.setTexture(WALL_TEXTURE);*/
 }
+//----------------------------------------------------------------------------
 void calculate() {
   getEyeMatrix(eyeMat);
   if (mousePressed) {
@@ -100,6 +107,7 @@ void calculate() {
     }
   }
 }
+//--------------------------------------------------------------------------------------
 public void draw() {
   background(0);
   translate(width/2, height/2);
@@ -107,13 +115,14 @@ public void draw() {
   ambientLight(200, 200, 255, 0, +1, -1);
   translate(tx, 0, tz);
   //image(GROUND_TEXTURE,0,+200,10000,1);
+  shader(texShader);
   shape(grid);
   shape(cubes);
-  drawMaze();
+  //drawMaze();
   
   
 }
-
+//------------------------------------------------------------------------------------------
 
 void drawMaze(){
   translate(width / 2, +200 - 300/2 , height / 2);
