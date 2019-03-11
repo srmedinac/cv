@@ -82,13 +82,11 @@ public void setup() {
     float s = 300;
     float y = +200 - s/2;
     PShape sh = createShape(BOX, s);
-    sh.beginShape();
     sh.texture(WALL_TEXTURE);
     //sh.setFill(color(255,0,0));
     //sh.drawMode(S3D.TEXTURE);
-     
+    sh.setTexture(WALL_TEXTURE);
     sh.translate(x, y, z);
-    sh.endShape();
     cubes.addChild(sh);
     
     
